@@ -1,1 +1,6 @@
+How to use vim 
 Hello Git I love you
+Vim is good but i like vscode bettter
+
+
+
