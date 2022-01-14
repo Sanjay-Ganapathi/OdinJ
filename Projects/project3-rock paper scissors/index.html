@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function computerPlay(){
+            let compGuess =  Math.floor(Math.random()*3) + 1;
+            return compGuess;
+        }
+
+        let playerGuess = prompt("Enter your selection");
+
+        let playerSelection;
+        if(playerGuess.toLowerCase() == "rock") playerSelection = 1;
+        else if (playerGuess.toLowerCase() == "paper") playerSelection = 2;
+        else if(playerGuess.toLowerCase() == "scissors") playerSelection = 3;
+        else alert("wrong selection");
+        
+
+        function playRound(playerSelection,computerSelection){
+            console.log(playerSelection,computerSelection);
+            return playerSelection>computerSelection ? "you won":"computer won"
+        }
+
+        console.log(playRound(playerSelection,computerPlay()));
+    </script>
+    
+</body>
+</html>
