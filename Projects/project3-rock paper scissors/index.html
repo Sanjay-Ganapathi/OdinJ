@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script>
-        function computerPlay(){
-            let compGuess =  Math.floor(Math.random()*3) + 1;
-            return compGuess;
-        }
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <div class="score-board">
+        <div class="badge" id="user-label">User</div>
+        <div class="badge" id ="comp-label">Computer</div>
+        <span id="user-score">0</span>:<span id="comp-score">0</span>
+    </div>
 
-        let playerGuess = prompt("Enter your selection");
+    <div class="result">
+        <p>Welcome to the arena!</p>
+    </div>
 
-        let playerSelection;
-        if(playerGuess.toLowerCase() == "rock") playerSelection = 1;
-        else if (playerGuess.toLowerCase() == "paper") playerSelection = 2;
-        else if(playerGuess.toLowerCase() == "scissors") playerSelection = 3;
-        else alert("wrong selection");
-        
+    <div class="choices">
+        <div class="choice" id="r">
+            <img src="images/rock.png" alt=""  >
+        </div>
+        <div class="choice" id="p">
+            <img src="images/paper.png" alt="" >
+        </div>
+        <div class="choice" id="s">
+            <img src="images/scissors.png" alt="" >
+        </div>
+    </div>
 
-        function playRound(playerSelection,computerSelection){
-            console.log(playerSelection,computerSelection);
-            return playerSelection>computerSelection ? "you won":"computer won"
-        }
+    <p id="action-message">Make your move</p>
 
-        console.log(playRound(playerSelection,computerPlay()));
-    </script>
-    
+    <script src = "app.js" charset="utf-8"></script>
 </body>
 </html>
