@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(224, 200, 200, 0.692);
+    font-family: 'Bebas Neue', cursive;
+    gap: 5%;
+}
+
+h1{
+    
+    font-size: 50px;
+    word-spacing: 5px;
+    font-weight: 200;
+}
+.content{
+    display: flex;
+}
+
+#grid-container{
+    margin-right: 20vw;
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-gap: 3px;
+    /* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px, rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+
+.controller-container{
+    margin-right:12vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+button{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    padding: 10px 50px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+button.active {
+    /* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(217, 47, 233, 0.59) 0px 0px 0px 3px;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+#redBtn:hover{
+    background: linear-gradient(-145deg, #c51818, #6b171e, #f10505, #f34242);
+    
+}
+
+#neonBtn:hover{
+    background: linear-gradient(-145deg, #571d45, #a1318e, #d01de7, #7615e6);
+    animation: gradient 5s ease infinite;
+    background-size: 400% 600%;
+}
+
+#rainbowBtn:hover{
+    background: linear-gradient(-45deg,violet,indigo,blue,green,yellow,red);
+    animation: gradient 5s ease infinite;
+    background-size: 400% 600%;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+footer{
+    font-size: 25px;   
+    text-align: center;   
+    
+}
+
+a{
+    
+    text-decoration: none;
+}
+
+
+
+@media (max-width:960px) {
+
+    .content{
+        flex-direction:column-reverse;
+        align-items: center;
+        
+    }
+    #grid-container{
+        width: 300px;
+        height: 300px;
+        margin: auto;
+
+    }
+
+    h1{
+    font-size: 25px;
+    }
+
+    button{
+        padding: 5px 50px;
+    }
+
+    .controller-container{
+        margin: 15% auto;
+        gap: 3vh;
+    }
+
+    footer{
+        font-size: 20px;
+    }
+
+}
